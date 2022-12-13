@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "奥鹏作业小助手",
+    "version": "0.1",
+    "description": "仅供学习交流，请勿作其他用途！请于24小时内删除",
+    "permissions": [
+        "storage",
+        "tabs",
+        "https://learn.open.com.cn/",
+        "https://homeworkapi.open.com.cn/",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "background": {
+        "scripts": [
+            "./js/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_title": "奥鹏作业小助手"
+    },
+    "content_scripts": [
+         {
+           "matches": ["*://learn.open.com.cn/StudentCenter/OnLineJob/*"],
+            "js": ["js/content_homework.js", "./js/jquery.js"] 
+        },
+        {
+            "matches": ["*://learn.open.com.cn/StudentCenter/*"],
+            "js": ["./js/jquery.js"]
+        }
+    ],
+    "web_accessible_resources" : ["*"]
+}

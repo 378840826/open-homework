@@ -1,0 +1,16 @@
+{
+  "name": "az-crx",
+  "scripts": {
+    "dist": "node gulpfile"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.2"
+  }
+}
