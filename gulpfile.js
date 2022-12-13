@@ -18,7 +18,7 @@ function js() {
         //   'changeStoreBindState',
         // ],
       },
-      // compress: { drop_console: true },
+      compress: { drop_console: true },
     }))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'))
@@ -49,10 +49,10 @@ function transferJquery() {
     .pipe(gulp.dest('./dist/js'))
 }
 
-// function transferImg() {
-//   return gulp.src('./src/icon/*.png')
-//     .pipe(gulp.dest('./dist/icon'))
-// }
+function transferImg() {
+  return gulp.src('./src/img/*.*')
+    .pipe(gulp.dest('./dist/img'))
+}
 
 function transferManifest() {
   return gulp.src('./src/manifest.json')
@@ -69,7 +69,7 @@ function __main() {
   css()
   html()
   transferJquery()
-  // transferImg()
+  transferImg()
   transferManifest()
   transferReadme()
 }
